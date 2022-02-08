@@ -1,3 +1,3 @@
 #!/bin/bash
-java -cp ./foodAPI.jar Food.java
-java -cp .:./foodAPI.jar Food | python3 ./makeJSON.py
+java -cp /scripts/food/foodAPI.jar Food.java
+java -cp /scripts/food:/scripts/food/foodAPI.jar Food | python3 /scripts/food/makeJSON.py
