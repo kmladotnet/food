@@ -11,6 +11,10 @@
 
 모든 급식 정보 api 및 데이터 가공은 GetFood.py 내에서 이루어집니다.
 
+급식 정보는 나이스 api를 사용합니다.
+[나이스 링크](https://open.neis.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=OPEN17320190722180924242823&infSeq=1)
+api 인증키가 만료될 일은 없지만, 만약 변경해야 한다면 위 사이트에서 새로 발급받아 config.json 파일에 "FOOD_KEY" : "[인증키]" 형식으로 저장하시면 됩니다.
+
 * 위의 작업은 /scripts/food/update.sh 라는 shell script를 이용해 자동화 합니다.
 
 ```bash
