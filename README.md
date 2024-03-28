@@ -22,8 +22,6 @@ cd /scripts/food
 python3 ./GetFood.py
 ```
 
-* java 파일의 출력값을 python 파일의 입력값으로 받아 실행을 시키는 것입니다.
-
 ## Cron (주기적 실행)
 
 * cron 이라는 프로그램을 이용해 매일 자정에 실행합니다. 
