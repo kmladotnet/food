@@ -5,15 +5,17 @@
 
 ## 작동 방식
 
-1. 급식 정보는 외부 java api를 사용해서 가져오며, 이 데이터를 총 2번 가공해 json 파일을 생성합니다.
+~~1. 급식 정보는 외부 java api를 사용해서 가져오며, 이 데이터를 총 2번 가공해 json 파일을 생성합니다.
 2. 첫 번째 가공은 Food.class 파일에서 이루어집니다. API를 이용해 올해의 급식 데이터를 가져오고, 정해진 형식으로 출력을 합니다 (Food.java 파일 참조). 
-3. 이 출력값을 makeJSON.py에서 입력값으로 받아 한 번 더 파싱합니다. 급식 뒤에 있는 숫자와 &(ampersand) 기호를 없앤 뒤, json 파일을 생성해냅니다.
+3. 이 출력값을 makeJSON.py에서 입력값으로 받아 한 번 더 파싱합니다. 급식 뒤에 있는 숫자와 &(ampersand) 기호를 없앤 뒤, json 파일을 생성해냅니다.~~
 
-* 위의 작업은 /scripts/food/update.sh 라는 shell script를 이용해 하나의 파일에서 처리합니다. 
+모든 급식 정보 api 및 데이터 가공은 GetFood.py 내에서 이루어집니다.
+
+* 위의 작업은 /scripts/food/update.sh 라는 shell script를 이용해 자동화 합니다.
 
 ```bash
 cd /scripts/food
-java -cp .:./foodAPI.jar Food | python3 ./makeJSON.py
+python3 ./GetFood.py
 ```
 
 * java 파일의 출력값을 python 파일의 입력값으로 받아 실행을 시키는 것입니다.
